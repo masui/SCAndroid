@@ -7,26 +7,29 @@
  */
 
 import React from 'react';
-import { Text, View, Button, SafeAreaView, StyleSheet, StatusBar} from 'react-native';
+import { Text, TextInput, View, Button, SafeAreaView, StyleSheet, StatusBar} from 'react-native';
 import { WebView } from 'react-native-webview';
 
 const App: React.FC = () => {
+  function xxx(){
+    alert('xxxxx');
+  }
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
 
       <View style={{position:'absolute', top:10, left:10, width:900}}>
-        <Text style={{position:'absolute', top: 0, left:10, fontStyle:'italic', fontWeight:'bold', fontSize:20}}>
-          東京タワー
-        </Text>
-        <Text style={{position:'absolute', top: 30, left:20}}>
-          YYYYYY
+        <TextInput style={{position:'absolute', top: 0, left:10}}>
+        </TextInput>
+        <Text style={{position:'absolute', top: 30, left:10, fontStyle:'italic', fontWeight:'bold', fontSize:12}}>
+          Line 1
         </Text>
         <Text style={{position:'absolute', top: 50, left:20}}>
-          Text BBBBB
+          Line 2
         </Text>
-        <Text style={{position:'absolute', top: 70, left:40}}>
-          Text 3
+        <Text style={{position:'absolute', top: 70, left:30}}>
+          Line 2.1
         </Text>
       </View>
         
@@ -35,12 +38,14 @@ const App: React.FC = () => {
   
         <View style={{position:'absolute', top:450, left:20, width:100}}>
           <Button
-              title="Press me"
+            title="Press me"
           />
         </View>
     </>
   );
 };
+
+/*            onPress= {this.xxx()} */
 
 const styles = StyleSheet.create({
   root: {
